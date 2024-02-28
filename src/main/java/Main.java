@@ -9,13 +9,21 @@ public class Main {
         personNameSet.add(new Person(24, "Matei"));
         personNameSet.add(new Person(30, "Ioana"));
 
+        System.out.println();
         System.out.println("Persoane sortate dupa nume:");
+        System.out.println();
         for(Person person : personNameSet){
             System.out.println(person);
-            System.out.println();
-        }
+                    }
         Set<Person> personAgeSet = new TreeSet<>(new PersonAgeComparator());
+
+        personAgeSet.add(new Person(28, "Andrei"));
+        personAgeSet.add(new Person(24, "Matei"));
+        personAgeSet.add(new Person(30, "Ioana"));
+
+        System.out.println();
         System.out.println("Persoane sortate dupa varsta:");
+        System.out.println();
         for(Person person : personAgeSet){
             System.out.println(person);
         }
@@ -28,7 +36,8 @@ public class Main {
         personHobbiesMap.put(new Person(28,"Andrei"),Arrays.asList(new Hobby("Ciclism",5,cyclingAddress)));
         personHobbiesMap.put(new Person(30,"Ioana"),Arrays.asList(new Hobby("Inotator",3,swimmingAddress)));
 
-        System.out.println("Hobby-uri si orasul unde pot fi practicate:");
+        System.out.println();
+        System.out.println("Hobby-uri si orasul unde pot fi practicate");
 
         for(Map.Entry<Person,List<Hobby>> entry : personHobbiesMap.entrySet()){
             Person person = entry.getKey();
